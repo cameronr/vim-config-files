@@ -4,17 +4,36 @@ set nocompatible
 filetype plugin on
 set backspace=start,indent,eol
 set whichwrap=h,l,~,[,],<,> " allow commands to wrap across lines
+syntax on
 
 " Display
-" set t_Co=256
+set t_Co=256
 colorscheme ir_black
+set background=dark
 set ruler
-syntax on
 set bg=dark
 set scrolloff=3
 set title
 set showmatch
-set completeopt=menu,longest " improve the way autocomplete works
+
+" Highlight SQL and HTML in PHP code
+let php_sql_query=1                                                                                        
+let php_htmlInStrings=1
+
+
+" Autocomplete/CTAG options
+
+" Enable autocomplete for PHP
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+
+" Select the longest text and display the menu
+set completeopt=longest,menu
+
+" Open tag in new tab
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
+" Find tags file in previous directories, stopping at our home directory
+set tags=./tags;$HOME
 
 " Search
 set wrapscan
@@ -39,7 +58,7 @@ inoremap # X<C-H>#
 " Tabs
 nmap <C-h> :tabprevious<CR>
 nmap <C-l> :tabnext<CR>
-nmap <C-t> :tabnew<CR>
+" nmap <C-t> :tabnew<CR>
 nmap <C-w> :quit<CR>
 ca tn tabnew
 
