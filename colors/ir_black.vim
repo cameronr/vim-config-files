@@ -217,3 +217,6 @@ hi TabLine        term=none cterm=underline ctermfg=7 ctermbg=0 gui=underline gu
 hi TabLineSel     term=NONE cterm=underline ctermfg=green  gui=bold
 hi TabLineFill    term=reverse cterm=reverse gui=reverse
 
+" Set background for autocomplete drop down menu
+hi Pmenu          ctermfg=darkgrey    ctermbg=darkgrey
+hi PmenuSel       ctermfg=blue        ctermbg=blue
