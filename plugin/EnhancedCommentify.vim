@@ -783,7 +783,7 @@ function s:GetFileTypeSettings(ft)
 		\ 'wget\|wml\|xf86conf\|xmath\)$'
 	let b:ECcommentOpen = '#'
 	let b:ECcommentClose = ''
-    elseif fileType == 'webmacro'
+    elseif fileType =~ '^\(webmacro\|mako\)$'
 	let b:ECcommentOpen = '##'
 	let b:ECcommentClose = ''
     elseif fileType == 'ppwiz'
