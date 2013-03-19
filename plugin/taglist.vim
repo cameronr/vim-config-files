@@ -85,21 +85,21 @@ if !exists('loaded_taglist')
 
     " Location of the exuberant ctags tool
     if !exists('Tlist_Ctags_Cmd')
-        if executable('exuberant-ctags')
+        if executable('ctags-exuberant')
             " On Debian Linux, exuberant ctags is installed
             " as exuberant-ctags
             let Tlist_Ctags_Cmd = 'exuberant-ctags'
         elseif executable('exctags')
             " On Free-BSD, exuberant ctags is installed as exctags
             let Tlist_Ctags_Cmd = 'exctags'
-        elseif executable('ctags')
-            let Tlist_Ctags_Cmd = 'ctags'
+        " elseif executable('ctags')
+            " let Tlist_Ctags_Cmd = 'ctags'
         elseif executable('ctags.exe')
             let Tlist_Ctags_Cmd = 'ctags.exe'
         elseif executable('tags')
             let Tlist_Ctags_Cmd = 'tags'
         else
-            echomsg 'Taglist: Exuberant ctags (http://ctags.sf.net) ' .
+            " echomsg 'Taglist: Exuberant ctags (http://ctags.sf.net) ' .
                         \ 'not found in PATH. Plugin is not loaded.'
             " Skip loading the plugin
             let loaded_taglist = 'no'
