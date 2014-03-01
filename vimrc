@@ -198,6 +198,6 @@ let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
 " make drop down menu easier to read
-highlight Pmenu ctermbg=8 ctermfg=2 guibg=#606060 guifg=#dddd00
+highlight Pmenu ctermbg=8 ctermfg=7 guibg=#606060 guifg=#dddd00
 highlight PmenuSel ctermbg=10 ctermfg=4 guifg=#dddd00 guibg=#1f82cd
 
