@@ -239,3 +239,8 @@ let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 highlight Pmenu ctermbg=8 ctermfg=7 guibg=#606060 guifg=#dddd00
 highlight PmenuSel ctermbg=10 ctermfg=4 guifg=#dddd00 guibg=#1f82cd
 
+" CtrlP: open new windows in new tab by default
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
