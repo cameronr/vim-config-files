@@ -13,9 +13,6 @@ Plugin 'gmarik/Vundle.vim'
 " auto complete plugin
 Plugin 'Shougo/neocomplcache.vim'
 
-" scala plugin
-Plugin 'derekwyatt/vim-scala'
-
 " fuzzy file finder
 Plugin 'kien/ctrlp.vim'
 
@@ -30,6 +27,15 @@ Plugin 'tpope/vim-fugitive'
 
 " git viewer
 Plugin 'gregsexton/gitv'
+
+" Gradle highlighting
+Plugin 'tfnico/vim-gradle'
+
+" scala plugin
+Plugin 'derekwyatt/vim-scala'
+
+" comment plugin
+Plugin 'tomtom/tcomment_vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -124,13 +130,6 @@ abbr hte the
 set wildmenu
 set wildmode=list:longest
 
-" Commenting
-let g:EnhCommentifyFirstLineMode = 'Yes'  " use the first line in a block rather than each line to decide whether to comment or uncomment
-let g:EnhCommentifyTraditionalMode = 'No' " this has to be disabled for above to work 
-let g:EnhCommentifyRespectIndent = 'Yes'
-let g:EnhCommentifyPretty = 'Yes'
-let g:EnhCommentifyUseBlockIndent = 'Yes'
-
 " Auto-detect .tac files as python
 au! BufNewFile,BufRead *.tac set filetype=python
 autocmd FileType python set tabstop=4 shiftwidth=4 softtabstop=4
@@ -169,6 +168,7 @@ let g:neocomplcache_max_list = 10
 "let g:neocomplcache_enable_camel_case_completion = 1
 " Use underbar completion.
 "let g:neocomplcache_enable_underbar_completion = 1
+
 
 " Define dictionary.
 let g:neocomplcache_dictionary_filetype_lists = {
@@ -241,11 +241,17 @@ let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
 " make drop down menu easier to read
-highlight Pmenu ctermbg=8 ctermfg=7 guibg=#606060 guifg=#dddd00
-highlight PmenuSel ctermbg=10 ctermfg=4 guifg=#dddd00 guibg=#1f82cd
+highlight Pmenu ctermbg=7 ctermfg=8 guibg=#606060 guifg=#dddd00
+highlight PmenuSel ctermbg=12 ctermfg=6 guifg=#dddd00 guibg=#1f82cd
+
 
 " CtrlP: open new windows in new tab by default
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
+
+" TComment: setup familiar hotkey for comment toggle (\x)
+noremap \x :TComment<cr>
+
+
