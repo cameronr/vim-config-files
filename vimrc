@@ -1,20 +1,57 @@
-" Pathogen support https://github.com/tpope/vim-pathogen
-execute pathogen#infect()
+" be iMproved, required
+set nocompatible
+
+" Vundle setup
+filetype off                  " required for initial vundle setup
+" set the runtime path to include Vundle and initialize
+set runtimepath+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" auto complete plugin
+Plugin 'Shougo/neocomplcache.vim'
+
+" scala plugin
+Plugin 'derekwyatt/vim-scala'
+
+" fuzzy file finder
+Plugin 'kien/ctrlp.vim'
+
+" nice color scheme
+Plugin 'altercation/vim-colors-solarized'
+
+" bracketed paste (no more set paste!)
+Plugin 'ConradIrwin/vim-bracketed-paste'
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
 
 " Editor
 set confirm
-set nocompatible
-filetype plugin on
+filetype plugin indent on
 set backspace=start,indent,eol
 set whichwrap=h,l,~,[,],<,> " allow commands to wrap across lines
 syntax on
+set visualbell
+
+" This makes vim act like all other editors, buffers can
+" exist in the background without being in a window.
+" http://items.sjbach.com/319/configuring-vim-right
+set hidden
 
 " Display
-set t_Co=256
-colorscheme ir_black
 set background=dark
+
+" Solarized color scheme settings
+" Make it display nicely in Mac OS Terminal
+let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+colorscheme solarized
+
 set ruler
-set bg=dark
 set scrolloff=3
 set title
 set showmatch
