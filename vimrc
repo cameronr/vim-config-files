@@ -25,6 +25,11 @@ Plugin 'altercation/vim-colors-solarized'
 " bracketed paste (no more set paste!)
 Plugin 'ConradIrwin/vim-bracketed-paste'
 
+" git integration
+Plugin 'tpope/vim-fugitive'
+
+" git viewer
+Plugin 'gregsexton/gitv'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
