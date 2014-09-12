@@ -109,9 +109,6 @@ inoremap # X<C-H>#
 " Tabs
 nmap <C-h> :tabprevious<CR>
 nmap <C-l> :tabnext<CR>
-" nmap <C-t> :tabnew<CR>
-nmap <C-w> :quit<CR>
-ca tn tabnew
 
 " Folding
 set foldlevel=0
