@@ -2,7 +2,7 @@
 set nocompatible
 
 " Vundle setup
-filetype off                  " required for initial vundle setup
+filetype off " required for initial vundle setup
 " set the runtime path to include Vundle and initialize
 set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -37,6 +37,9 @@ Plugin 'derekwyatt/vim-scala'
 " comment plugin
 Plugin 'tomtom/tcomment_vim'
 
+" autotag plugin
+Plugin 'craigemery/vim-autotag'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -68,14 +71,9 @@ set title
 set showmatch
 
 " Highlight SQL and HTML in PHP code
-let php_sql_query=1                                                                                        
+let php_sql_query=1
 let php_htmlInStrings=1
 
-
-" Autocomplete/CTAG options
-
-" Enable autocomplete for PHP
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
 " Select the longest text and display the menu
 set completeopt=longest,menu
@@ -228,6 +226,8 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+
 
 " Enable heavy omni completion.
 if !exists('g:neocomplcache_omni_patterns')
