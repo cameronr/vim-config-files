@@ -43,6 +43,9 @@ Plugin 'craigemery/vim-autotag'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
+" another escape option
+imap jk <Esc>
+
 " Editor
 set confirm
 filetype plugin indent on
