@@ -40,6 +40,9 @@ Plugin 'tomtom/tcomment_vim'
 " autotag plugin
 Plugin 'craigemery/vim-autotag'
 
+" docker plugin
+Plugin 'honza/dockerfile.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -254,4 +257,5 @@ let g:ctrlp_prompt_mappings = {
 " TComment: setup familiar hotkey for comment toggle (\x)
 noremap \x :TComment<cr>
 
-
+" git settings
+autocmd Filetype gitcommit setlocal spell textwidth=72
