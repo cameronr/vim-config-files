@@ -43,6 +43,10 @@ Plugin 'craigemery/vim-autotag'
 " docker plugin
 Plugin 'honza/dockerfile.vim'
 
+" salt plugin
+Plugin 'saltstack/salt-vim'
+
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
