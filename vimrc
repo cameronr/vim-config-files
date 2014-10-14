@@ -41,7 +41,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'craigemery/vim-autotag'
 
 " docker plugin
-Plugin 'honza/dockerfile.vim'
+Plugin 'ekalinin/Dockerfile.vim'
 
 " salt plugin
 Plugin 'saltstack/salt-vim'
