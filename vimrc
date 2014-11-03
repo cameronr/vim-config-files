@@ -46,6 +46,11 @@ Plugin 'ekalinin/Dockerfile.vim'
 " salt plugin
 Plugin 'saltstack/salt-vim'
 
+" javascript plugin
+Plugin 'pangloss/vim-javascript'
+
+" JSX plugin
+Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
