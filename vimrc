@@ -20,6 +20,12 @@ Plugin 'Shougo/neocomplcache.vim'
 " fuzzy file finder
 Plugin 'kien/ctrlp.vim'
 
+" Buffer manager
+"Plugin 'jeetsukumaran/vim-buffergator'
+
+" Baller status line
+Plugin 'bling/vim-airline'
+
 " nice color scheme
 Plugin 'altercation/vim-colors-solarized'
 
@@ -72,12 +78,14 @@ endif
 imap jk <Esc>
 
 " Editor
+set encoding=utf-8
 set confirm
 filetype plugin indent on
 set backspace=start,indent,eol
 set whichwrap=h,l,~,[,],<,> " allow commands to wrap across lines
 syntax on
 set visualbell
+set laststatus=2
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -157,16 +165,6 @@ set wildmode=list:longest
 au! BufNewFile,BufRead *.tac set filetype=python
 autocmd FileType python set tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType make setlocal noexpandtab
-
-
-function! RunShebang()
-  if (match(getline(1), '^\#!') == 0)
-    :!./%
-  else
-    echo "No shebang in this file."
-  endif
-endfunction
-map <F5> :call RunShebang()<CR>
 
 " make :W also write to file
 command! W write
@@ -281,3 +279,28 @@ noremap \x :TComment<cr>
 
 " git settings
 autocmd Filetype gitcommit setlocal spell textwidth=72
+
+" config airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline_inactive_collapse = 1
+let g:airline_theme = 'murmur'
+" no powerline fonts
+let g:airline_powerline_fonts = 0
+let g:airline#extensions#tabline#show_close_button = 0
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
