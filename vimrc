@@ -286,6 +286,8 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 " config airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_tab_type = 0
+ let g:airline#extensions#tabline#show_tab_nr = 0
 let g:airline_inactive_collapse = 1
 let g:airline_theme = 'murmur_muted'
 " no powerline fonts
