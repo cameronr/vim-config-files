@@ -26,6 +26,9 @@ Plugin 'kien/ctrlp.vim'
 " Baller status line
 Plugin 'bling/vim-airline'
 
+" my custom theme
+Plugin 'cameronr/vim-airline-murmur-muted'
+
 " nice color scheme
 Plugin 'altercation/vim-colors-solarized'
 
@@ -284,7 +287,7 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline_inactive_collapse = 1
-let g:airline_theme = 'murmur'
+let g:airline_theme = 'murmur_muted'
 " no powerline fonts
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#show_close_button = 0
