@@ -4,7 +4,7 @@ set nocompatible
 " Vundle setup
 
 " Install vundle if it's not already installed
-source vundle-bootstrap.vim
+source ~/.vim/vundle-bootstrap.vim
 
 filetype off " required for initial vundle setup
 " set the runtime path to include Vundle and initialize
