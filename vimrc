@@ -2,6 +2,10 @@
 set nocompatible
 
 " Vundle setup
+
+" Install vundle if it's not already installed
+source vundle-bootstrap.vim
+
 filetype off " required for initial vundle setup
 " set the runtime path to include Vundle and initialize
 set runtimepath+=~/.vim/bundle/Vundle.vim
@@ -46,14 +50,23 @@ Plugin 'ekalinin/Dockerfile.vim'
 " salt plugin
 Plugin 'saltstack/salt-vim'
 
-" javascript plugin
-Plugin 'pangloss/vim-javascript'
-
-" JSX plugin
-Plugin 'mxw/vim-jsx'
+" javascript plugins
+    " better indentation/syntax support
+    Plugin 'pangloss/vim-javascript'
+    " jsx support
+    Plugin 'mxw/vim-jsx'
+    " enhanced syntax highlighting
+    Plugin 'jelera/vim-javascript-syntax'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
+" If we just bootstrapped, install plugins
+if iCanHazVundle == 0
+    echo "Installing Bundles, please ignore key map error messages"
+    echo ""
+    :PluginInstall
+endif
 
 " another escape option
 imap jk <Esc>
