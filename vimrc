@@ -67,6 +67,9 @@ Plugin 'saltstack/salt-vim'
     " enhanced syntax highlighting
     Plugin 'jelera/vim-javascript-syntax'
 
+" Highlight/strip whitespace
+Plugin 'ntpeters/vim-better-whitespace'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -309,3 +312,8 @@ let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
+" vim-better-whitespace config
+let g:strip_whitespace_on_save=1
+
+" vim-jsx
+let g:jsx_ext_required = 0
