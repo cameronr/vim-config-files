@@ -59,6 +59,9 @@ Plugin 'ekalinin/Dockerfile.vim'
 " salt plugin
 Plugin 'saltstack/salt-vim'
 
+" coffeescript plugin
+Plugin 'kchmck/vim-coffee-script'
+
 " javascript plugins
     " better indentation/syntax support
     Plugin 'pangloss/vim-javascript'
@@ -69,6 +72,12 @@ Plugin 'saltstack/salt-vim'
 
 " Highlight/strip whitespace
 Plugin 'ntpeters/vim-better-whitespace'
+
+" Thrift plugin
+Plugin 'solarnz/thrift.vim'
+
+" Ack search tool
+Plugin 'mileszs/ack.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -140,7 +149,7 @@ set shiftround
 set expandtab
 set autoindent
 set softtabstop=2
-set smartindent
+" set smartindent
 "let g:PHP_BracesAtCodeLevel = 1
 set cinwords=if,else,while,do,for,switch,elseif,unless,until,foreach
 " don't move # to the far left
@@ -317,3 +326,9 @@ let g:strip_whitespace_on_save=1
 
 " vim-jsx
 let g:jsx_ext_required = 0
+
+" make ag work better
+let g:ackprg = 'ag --vimgrep'
+
+" fix editing crontabs on MacOS
+autocmd filetype crontab setlocal nobackup nowritebackup
