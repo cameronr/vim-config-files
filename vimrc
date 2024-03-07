@@ -12,7 +12,7 @@ set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " auto complete plugin
 Plugin 'Shougo/neocomplcache.vim'
@@ -24,7 +24,7 @@ Plugin 'kien/ctrlp.vim'
 "Plugin 'jeetsukumaran/vim-buffergator'
 
 " Baller status line
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
 
 " my custom theme
 Plugin 'cameronr/vim-airline-murmur-muted'
@@ -79,6 +79,12 @@ Plugin 'solarnz/thrift.vim'
 " Ack search tool
 Plugin 'mileszs/ack.vim'
 
+" Dart support
+Plugin 'dart-lang/dart-vim-plugin'
+
+" Flutter
+Plugin 'thosakwe/vim-flutter'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -99,7 +105,7 @@ filetype plugin indent on
 set backspace=start,indent,eol
 set whichwrap=h,l,~,[,],<,> " allow commands to wrap across lines
 syntax on
-set visualbell
+" set visualbell
 set laststatus=2
 
 " This makes vim act like all other editors, buffers can
@@ -326,6 +332,10 @@ let g:strip_whitespace_on_save=1
 
 " vim-jsx
 let g:jsx_ext_required = 0
+
+" javascript indentation
+autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
+
 
 " make ag work better
 let g:ackprg = 'ag --vimgrep'
